@@ -1,7 +1,7 @@
 import re
 
 
-""" A  module for authenticating  user registraton info """
+""" A  module for authenticating  user registration info """
 
 class Authenticate_user_registration_info():
 
