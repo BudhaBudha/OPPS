@@ -44,4 +44,18 @@ class Authenticate_user_registration_info():
                       return True
                 
                 return False
-       
+          
+          """ a method to verify user names """
+          def verify_user_names(self)-> bool:
+                if re.match('^[a-zA-Z0-9]*$', self.first_name):
+                      return True
+                
+                return False
+
+                      
+        
+                  
+
+
+
+          
