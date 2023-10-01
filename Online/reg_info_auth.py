@@ -8,8 +8,7 @@ class Authenticate_user_registration_info():
           def __init__(self, reg_number:str, email: str, password:str, 
                         phone_number: str, first_name:str, second_name: str,
                         ):
-                   
-                  
+                                    
                   
                    self.reg_number = reg_number
                    self.email = email
@@ -31,6 +30,14 @@ class Authenticate_user_registration_info():
                   
                   else:
                          return False
+                  
+          """ a method to verify user email"""
+          def verify_user_registration_email(self):
+                 if re.match(r"[^@]+@[^@]+\.[^@]+", self.email):
+                    return True
+    
+                 return False
+        
                   
 
 
