@@ -32,13 +32,16 @@ class Authenticate_user_registration_info():
                          return False
                   
           """ a method to verify user email"""
-          def verify_user_registration_email(self):
+          def verify_user_registration_email(self)-> bool:
                  if re.match(r"[^@]+@[^@]+\.[^@]+", self.email):
                     return True
     
                  return False
-        
-                  
-
-
           
+          """ a method to verify user password """
+          def verify_user_password(self)-> bool:
+                if not len(self.password)< 6:
+                      return True
+                
+                return False
+       
