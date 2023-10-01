@@ -18,11 +18,10 @@ class Authenticate_user_registration_info():
                    self.second_name = second_name
 
           """ a method to verify user phone number """
-          def verify_user_registration_number(self)-> bool:
+          def verify_user_phone_number(self)-> bool:
                   pattern = r'^\+254\d{9}$'
                   if re.match(pattern,self.phone_number ):
                          phone_number = "0"+self.phone_number[4:]
-                         print(phone_number)
                          if re.match("^(07|01)\d{8}$", phone_number):
                                 return True
                          
@@ -51,11 +50,11 @@ class Authenticate_user_registration_info():
                       return True
                 
                 return False
-
-                      
-        
-                  
-
+          
+          """ a method to validate user registration number """
+          def verify_user_registration_number(self)->bool:
+                 
+                 pass
 
 
           
