@@ -22,8 +22,10 @@ DOCTYPE,html {
 .header .logo img{
     width: 100px;
     cursor: pointer;
-    margin-top: 3px;
   
+}
+body{
+    background-color: #F2F2F2;
 }
 #toggle{
     font-size: 30px;
@@ -46,6 +48,9 @@ DOCTYPE,html {
 .title,.profile{
     color: #5AA7EE;
 }
+.title h1{
+    font-size: 30px;
+}
 .profile h2{
     font-size: 18px;
     font-weight: 200;
@@ -56,7 +61,6 @@ DOCTYPE,html {
     height: 90vh;
    display: flex;
    flex-direction: row;
-   justify-content: space-between;
    
 }
 .sidepanel{
@@ -67,7 +71,6 @@ DOCTYPE,html {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
 
 }
 .sidepanel i{
@@ -115,7 +118,6 @@ DOCTYPE,html {
     height: 100%;
     width:85vw ;
     padding: 50px;
-    background-color: #F2F2F2;
 }
 .mainscreen h3{
     color: #1763D6;
@@ -123,54 +125,71 @@ DOCTYPE,html {
 .mainscreen h2{
     color: #5AA7EE;
 }
-.project{
-    position: relative;
+.profile-top{
+width: 100%;
+padding: 0px 10px;
+height: 120px;
+display: flex;
+justify-content: space-between;
+}
+.profileImage{
+    margin-top: 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    height: 70vh;
-    margin-right: 150px;
-}
-
-.projectContent{
-    margin-left: 30px;
-    border-radius: 16px;
-    width: 400px;
-    height: 150px;
-    box-shadow: 5px 5px rgba(53, 49, 49, 0.159);
-    background-color: #F5F5F5;
-    cursor: pointer;
-}
-.projectTitle{
-    margin-top: 20px;
-    margin-left: 60px;
-    font-size: 18px;
-    font-weight: 400;
-}
-.view{
-   display: flex;
- margin-left: 350px;
-   margin-top: 30px;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
     align-items: center;
     justify-content: center;
+    line-height: 110px;
+    background-color:rgba(0,0,0,.2) ;
+    padding: 5px;
 }
-.create{
-    position: relative;
-    margin-left: 925px;
-    margin-top: -90px;
-   background-color: #F5F5F5;
-   width: 100px;
-   height: 50px;
-   align-items: center;
-   border-radius: 50px;
-   display: flex;
-   box-shadow: 5px 5px rgba(53, 49, 49, 0.159);
-   justify-content: center;
-   cursor: pointer;
-   
-   
+.profileImage i{
+ font-size: 70px;
+ opacity: .2;
+    
+
+}
+.header i{
+    opacity: .2; 
+}
+.editIcon{
+    margin-top: 100px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.profileDetails{
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.userInfo{
+    width: 70%;
+}
+.status{
+    margin-top: 30px;
+}
+#studentStatus{
+    padding: 8px;
+    background-color: #1763D6;
+    pointer-events: none;
+    border-radius: 35px;
+    color: #F2F2F2;
+    
+}
+.proposalStats{
+    margin-top: 30px;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    height: 300px;
+    justify-content: space-around;
+}
+.proposalStats div{
+    width: 200px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px 1px #5AA7EE;
 }

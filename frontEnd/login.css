@@ -85,14 +85,16 @@ background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(images/stud
    align-items: center;
    justify-content: center;
    position: relative;
+   
 }
 .inputField i{
  position: absolute;
-z-index: 2;
 left: 0;
 padding: 50px;
 color: grey;
 font-size: 16px;
+outline: none;
+
 }
 .credential .input{
     border: transparent;
@@ -121,6 +123,7 @@ font-size: 16px;
     text-decoration: underline;
 }
 .remember{
+    accent-color: #1763D6;
     margin:0  10px;
     cursor: pointer;
     

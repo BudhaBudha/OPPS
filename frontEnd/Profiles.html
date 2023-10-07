@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profiles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+    <title>Profiles</title>
+</head>
+<body>
+    <div class="header">
+        <div class="toggle">
+            <img src="images/Mmust logo.png" alt="logo">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="title">
+            <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE & TECHNOLOGY</h1>
+        </div>
+        <div class="user">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <iconify-icon icon="pepicons-pencil:line-y" style="font-size: 16px;stroke:17%;"></iconify-icon>
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <p>Hi, Kingsly</p>
+        </div>
+    </div>
+    <div class="info">
+        <div class="sidepanel">
+            <div class="up">
+              
+              <div class="dashboard"><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
+              <div class="proposalStatus"><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px;"></iconify-icon> Proposal Status</div>
+              <div class="proposalList"><iconify-icon icon="line-md:list" style="font-size: 23px;" id="proposalListIcon"></iconify-icon> Proposal List</div>
+            </div>
+            <div class="bottom">
+              <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> <span> Settings </span></div>
+            </div>
+          </div>  
+        <div class="mainscreen">
+            <section class="options">
+                <h2>Profile Settings</h2>
+                <p class="active"><iconify-icon class="icon" icon="mdi:user"></iconify-icon> Profile  <iconify-icon icon="ep:arrow-right"></iconify-icon></p>
+                <p><iconify-icon icon="mdi:password"></iconify-icon> Password & Security</p>
+                <p><iconify-icon icon="iconamoon:notification-light"></iconify-icon> Notification Settings</p>
+            </section>
+            <section class="show">
+                <div class="profileImage">
+                    <iconify-icon class="icon" icon="mdi:user"></iconify-icon>
+                </div>
+                <div class="details">
+                    <p>
+                        <label> Full Name</label>
+                        <div class="showcase" id="studentName"></div>
+                    </p>
+                    <p>
+                        <label> Student Email</label>
+                        <div class="showcase" id="studentEmail"></div>
+                    </p>
+                    <p>
+                        <label> Registration Number</label>
+                        <div class="showcase" id="studentRegNum"></div>
+                    </p>
+                    <p>
+                        <label>Phone Number</label>
+                        <div class="showcase" id="phoneNum"></div>
+                    </p>
+                 
+                    <button type="submit" class="save">UPDATE</button>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+</html>
