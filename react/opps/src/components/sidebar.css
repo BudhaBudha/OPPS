@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    font-size: 20px;
+}
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #1763D6;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  .sidebar-listB {
+    list-style-type: none;
+    padding-top: 500PX;
+  }
+
+  .sidebar-item:hover {
+    color: #000000; /* Change color on hover */
+  }
+  
