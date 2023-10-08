@@ -9,7 +9,7 @@ DOCTYPE,html {
     overflow-y: hidden;
 }
 .header{
-    position: relative;
+    position: fixed;
     width: 100vw;
     height: 12vh;
     display: flex;
@@ -65,7 +65,10 @@ body{
 }
 .sidepanel{
     background-color: #1763D6;
-    width: 15vw;
+    width: 17vw;
+    position: fixed;
+    top: 0;
+    margin-top: 12vh;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -118,6 +121,8 @@ body{
     height: 100%;
     width:85vw ;
     padding: 50px;
+    margin-top: 12vh;
+    margin-left: 17vw;
 }
 .mainscreen h3{
     color: #1763D6;

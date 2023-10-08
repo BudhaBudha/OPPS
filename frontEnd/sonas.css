@@ -13,13 +13,14 @@ body{
 }
 .header{
     z-index: 10;
+    top: 0;
     position: fixed;
     width: 100vw;
     height: 12vh;
     display: flex;
-    background-color: #1763D6;
+    background-color:  #F2F2F2;
     justify-content: center;
-    color: white;
+    color: black;
     align-items: center;
     justify-content: space-between;
     box-shadow: 10px 5px rgba(209, 202, 202, 0.262);   
@@ -49,7 +50,7 @@ body{
 }
 .title{
     width: 70vw;
-    color: #F2F2F2;
+    color: #5AA7EE;
     pointer-events: none;
 }
 .user{
@@ -78,11 +79,12 @@ body{
 }
 .sidepanel{
     background-color: #1763D6;
+    
     width: 15vw;
     height: 100%;
     display: flex;
     flex-direction: column;
-   
+   top: 0;
     align-items: center;
     z-index: 2;
     position: fixed;

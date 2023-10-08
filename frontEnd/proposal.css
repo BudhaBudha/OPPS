@@ -12,10 +12,12 @@ body{
     background-color: #F2F2F2;
 }
 .header{
-    position: relative;
+    position: fixed;
+    background-color: #F2F2F2;
     width: 100vw;
     height: 12vh;
     display: flex;
+
     justify-content: center;
     align-items: center;
     justify-content: space-between;
@@ -74,13 +76,16 @@ body{
 }
 .sidepanel{
     background-color: #1763D6;
-    width: 15vw;
+    width: 17vw;
+    top: 0;
+    margin-top: 12vh;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     z-index: 2;
+    position: fixed;
 
 }
 
@@ -115,6 +120,8 @@ body{
 }
 .mainscreen{
     display: flex;
+    margin-top: 12vh;
+    margin-left: 17vw;
     width: 60%;
     height: 100%;
     justify-content: space-between;

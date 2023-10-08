@@ -12,9 +12,10 @@ body{
     background-color: #F2F2F2;
 }
 .header{
-    position: relative;
+    position: fixed;
     width: 100vw;
     height: 12vh;
+    background-color: #F2F2F2;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,12 +76,15 @@ body{
 .sidepanel{
     background-color: #1763D6;
     width: 15vw;
+    margin-top: 12vh;
     height: 100%;
+    position: fixed;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    z-index: 2;
+   
 
 }
 
@@ -119,6 +123,8 @@ body{
     height: 100%;
     justify-content: space-between;
     padding: 20px;
+    margin-top: 12vh;
+    margin-left: 17vw;
 }
 .mainscreen h2{
     color: #5AA7EE;
