@@ -11,35 +11,67 @@
     <title>HomePage</title>
 </head>
 <body>
+    
     <div class="header">
-        <div class="logo">
-            <img src="images/Mmust logo.png" alt="">
+        <div class="left">
+            <div class="logo">
+                <a href="./homepage.html" title="homepage">
+                    <img src="images/Mmust logo.png" alt=""  >
+                </a>
+                
+            </div>
+            <div class="toggle"><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></div>
         </div>
-        <div class="toggle"><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></div>
+
         <div class="title">
             <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE AND TECHNOLOGY</h1>
         </div>
-        <div class="notification"><iconify-icon icon="akar-icons:bell" style="font-size: 23px;" id="notificationBell"></iconify-icon></div>
+        <div class="right">
+            <div class="notification"><iconify-icon icon="akar-icons:bell" style="font-size: 23px;" id="notificationBell"></iconify-icon></div>
         <div class="line"><iconify-icon icon="pepicons-pencil:line-y" style="font-size: 40px;stroke:7%;"></iconify-icon></div>
         <div class="profile">
             <h2><i class="fa fa-user" aria-hidden="true" id="user"></i>   Hi,<span id="profileName">Kingsly</span></h2>
         </div>
+        </div>
+        
     </div>
     <div class="info">
-        <div class="sidepanel">
-          <div class="up">
-            
-            <div class="dashboard"><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
-            <div class="proposalStatus"><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px; color: white;"></iconify-icon> Proposal Status</div>
-            <div class="proposalList"><iconify-icon icon="line-md:list" style="font-size: 23px;" id="proposalListIcon"></iconify-icon> Proposal List</div>
-          </div>
-          <div class="bottom">
-            <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> <span>Settings</span></div>
-          </div>
-        </div>  
+        <div class="panel">
+            <div class="sidepanel">
+                <div class="up">
+                    <a href="homepage.html">
+                        <div class="dashboard" style="color: black;"><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
+                    </a>
+                   <a href="Proposals.html">
+                    <div class="proposalStatus"><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px;"></iconify-icon> Proposal Status</div>
+                   </a>
+
+                    <a href="Profiles.html">
+                        <div class="profileIcon" ><iconify-icon icon="clarity:user-line"style="font-size: 23px;" ></iconify-icon>Profile</div>
+
+                    </a>
+                    <a href="#">
+                        <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> Settings</div>
+
+                    </a>
+                </div>
+        </div>
+         
         <div class="mainscreen">
-            <h3>Dashboard</h3>
-            <h2>Recently Added: </h2>
+            <div class="upper1">
+                <div class="upper">
+                
+                    <h3>Dashboard</h3>
+                    <h2>Recently Added: </h2>
+                </div>
+                <a href="sass.html">
+                    <div class="create">
+                        <p>create <i class="fa fa-plus" aria-hidden="true"></i></p>
+                    </div>
+                </a>
+              
+            </div>
+            
 
             <div class="project">
                 <div class="projectContent">
@@ -59,15 +91,14 @@
                     <h5 class="projectTitle">Project Title</h5>
                     <div class="view"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i></div>
                 </div>
-
-            </div>
-            <div class="create">
-                <p>create <i class="fa fa-plus" aria-hidden="true"></i></p>
+                
+            
             </div>
             
 
         </div>
     </div>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script> 
+    <script src="index.js"></script>
 </body>
 </html>
