@@ -56,7 +56,8 @@
            
           </div>  
         <div class="mainscreen">
-            <form class="options">
+            <form class="options" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="top">
                     <div class="logo"></div>
                     <a href="sonas.html"   class="sonas" style="text-decoration: none;">
@@ -66,8 +67,13 @@
                     <h5>SASS PROJECT PROPOSAL</h5>
 
                 </div>
+<<<<<<< HEAD
+                {{ form.as_p }} 
+                <div class="questions" style="padding: 30px;">
+=======
                 
                 <div class="questions">
+>>>>>>> 925872370608e06b5f1d56ed179ca38fbc4183cc
                     <div class="Q1">
                         <p> a) Problem identification and background/Needs assessment (Max. 1000 words) (15 marks) <br>
                             What issue/challenge/gap does the project aim to address? The objectives should be clear, measureable, realistic and achievable within the duration of the project. For each objective, define appropriate indicators for measuring achievement (including a unit of measurement, baseline value and target value).</p>
@@ -92,9 +98,15 @@
                      </div>
 
                      <div class="btn">
+<<<<<<< HEAD
+                        <button class="save">SAVE</button>
+                        <input type="submit" value="submit">
+                        <button class="discard">DISCARD</button>
+=======
                         <button type="button" class="save">SAVE</button>
                         <button type="button" class="submit">SUBMIT</button>
                         <button type="button" class="discard">DISCARD</button>
+>>>>>>> 925872370608e06b5f1d56ed179ca38fbc4183cc
                      </div>
 
 
