@@ -8,71 +8,105 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
-    <title>Admin Dashboard</title>
+    <title>Sass</title>
 </head>
 <body>
     <div class="header">
-        <div class="toggle">
-            <img src="images/Mmust logo.png" alt="logo">
-            <i class="fa fa-bars" aria-hidden="true"></i>
+        <div class="left">
+            <div class="logo">
+                <a href="./homepage.html" title="homepage">
+                    <img src="images/Mmust logo.png" alt=""  >
+                </a>
+                
+            </div>
+            <div class="toggle"><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></div>
         </div>
+
         <div class="title">
-            <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE & TECHNOLOGY</h1>
+            <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE AND TECHNOLOGY</h1>
         </div>
-        <div class="user">
-            <i class="fa fa-bell" aria-hidden="true"></i>
-            <iconify-icon icon="pepicons-pencil:line-y" style="font-size: 16px;stroke:17%;"></iconify-icon>
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <p>Hi, Kingsly</p>
+        <div class="right">
+            <div class="notification"><iconify-icon icon="akar-icons:bell" style="font-size: 23px;" id="notificationBell"></iconify-icon></div>
+        <div class="line"><iconify-icon icon="pepicons-pencil:line-y" style="font-size: 40px;stroke:7%;"></iconify-icon></div>
+        <div class="profile">
+            <h2><i class="fa fa-user" aria-hidden="true" id="user"></i>   Hi,<span id="profileName">Kingsly</span></h2>
         </div>
+        </div>
+        
     </div>
     <div class="info">
         <div class="sidepanel">
             <div class="up">
               
-              <div class="dashboard"><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
-              <div class="proposalStatus"><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px;"></iconify-icon> Proposal Status</div>
-              <div class="proposalList" ><iconify-icon icon="line-md:list" style="font-size: 23px;" id="proposalListIcon"></iconify-icon> Proposal List</div>
-              <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> <span> Settings </span></div>
-            </div>
+                <a href="homepage.html">
+                    <div class="dashboard" ><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
+                  </a>
+                    <a href="proposals.html">
+                        <div class="proposalStatus"><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px;"></iconify-icon> Proposal Status</div>
+                    </a>   
+                      
+                      <a href="Profiles.html">
+                        <div class="profileIcon" ><iconify-icon icon="clarity:user-line"style="font-size: 23px"></iconify-icon>Profile</div>
+                      </a>  
+                      <a href="#">
+                        <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> Settings</div>
+                      </a>
+                       
+              </div>
            
           </div>  
         <div class="mainscreen">
-            <form class="options">
+            <form class="options" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
                 <div class="top">
                     <div class="logo"></div>
+                    <a href="sonas.html"   class="sonas" style="text-decoration: none;">
+                        Go to SONAS
+                    </a>
+                    
                     <h5>SASS PROJECT PROPOSAL</h5>
 
                 </div>
-                
+<<<<<<< HEAD
+                {{ form.as_p }} 
                 <div class="questions" style="padding: 30px;">
+=======
+                
+                <div class="questions">
+>>>>>>> 925872370608e06b5f1d56ed179ca38fbc4183cc
                     <div class="Q1">
                         <p> a) Problem identification and background/Needs assessment (Max. 1000 words) (15 marks) <br>
                             What issue/challenge/gap does the project aim to address? The objectives should be clear, measureable, realistic and achievable within the duration of the project. For each objective, define appropriate indicators for measuring achievement (including a unit of measurement, baseline value and target value).</p>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea title="question" name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <div class="Q1">
                         <p> 
                             b) Research Purpose and anticipated results (800) (15 Marks)                            
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
+                            <textarea title="question" name="" id="" cols="30" rows="10"></textarea>
                     </div>
                     <div class="Q1">
                         <p> c) Project Design and Methodology (1000 words) (20 Marks) <br>
                             Outline the approach and methodology behind the project. Explain why they are the most suitable for achieving the project’s objectives.
                             
-                            <textarea name="" id="" cols="30" rows="10" ></textarea>
+                            <textarea title="question" name="" id="" cols="30" rows="10" ></textarea>
                     </div>
 
                     <div class="Q1">
                         <p>d) Gender Equality, Equity, and Inclusion considerations (maximum 500 words) (10 marks)
                             
-                            <textarea name="" id="" cols="30" rows="10" ></textarea>
+                            <textarea title="question" name="" id="" cols="30" rows="10" ></textarea>
                      </div>
 
                      <div class="btn">
+<<<<<<< HEAD
                         <button class="save">SAVE</button>
-                        <button class="submit">SUBMIT</button>
+                        <input type="submit" value="submit">
                         <button class="discard">DISCARD</button>
+=======
+                        <button type="button" class="save">SAVE</button>
+                        <button type="button" class="submit">SUBMIT</button>
+                        <button type="button" class="discard">DISCARD</button>
+>>>>>>> 925872370608e06b5f1d56ed179ca38fbc4183cc
                      </div>
 
 
