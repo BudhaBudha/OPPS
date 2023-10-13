@@ -6,10 +6,3 @@ NavBar.addEventListener("click",()=>{
     Sidebar.classList.toggle("active");
     Main.classList.toggle("active");
 });
-
-let profilePic = document.getElementById("profilePic");
-let inputFile = document.getElementById("input-file");
-
-inputFile.onchange= function(){
-    profilePic.src =URL.createObjectURL(inputFile.files[0]);           
-}

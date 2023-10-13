@@ -7,34 +7,75 @@ from django.contrib.auth.models import User
 from rest_framework.authentication import TokenAuthentication
 from rest_framework import generics
 from rest_framework import viewsets
-from django.shortcuts import render
+from django.contrib.auth import authenticate, login
+from .models import *
+from django.shortcuts import render,redirect
 from django import forms
 
-# Class based view to Get User Details using Token Authentication
-class StudentDetailAPI(APIView):
-  authentication_classes = (TokenAuthentication,)
-  permission_classes = (AllowAny,)
-  def get(self,request,*args,**kwargs):
-    user = Student.objects.get(id=request.user.id)
-    serializer = StudentSerializer(user)
-    return Response(serializer.data)
+def signup(request):
+    if (request.method == 'POST'):
+        email = request.POST.get('email')
+        password = request.POST.get('password')
+        st = request.POST.get('student')
+        te = request.POST.get('teacher')
+        
+        user = User.objects.create_user(
+            email=email,
+        )
+        user.set_password(password)
+        user.save()
+        
+        usert = None
+        if st:
+            usert = user_type(user=user,is_student=True)
+        elif te:
+            usert = user_type(user=user,is_teach=True)
+        
+        usert.save()
+        #Successfully registered. Redirect to homepage
+        return redirect('home')
+    return render(request, 'signup.html')
 
-#Class based view to register user
-class StudentRegisterAPIView(generics.CreateAPIView):
-  permission_classes = (AllowAny,)
-  serializer_class = StudentRegisterSerializer
+def login(request):
+    if (request.method == 'POST'):
+        email = request.POST.get('email') #Get email value from form
+        password = request.POST.get('password') #Get password value from form
+        user = authenticate(request, email=email, password=password)
+        
+        if user is not None:
+            login(request, user)
+            type_obj = user_type.objects.get(user=user)
+            if user.is_authenticated and type_obj.is_student:
+                return redirect('shome') #Go to student home
+            elif user.is_authenticated and type_obj.is_teach:
+                return redirect('thome') #Go to teacher home
+        else:
+            # Invalid email or password. Handle as you wish
+            return redirect('home')
 
-class LecturerDetailAPI(APIView):
-  authentication_classes = (TokenAuthentication,)
-  permission_classes = (AllowAny,)
-  def get(self,request,*args,**kwargs):
-    user = Lecturer.objects.get(id=request.user.id)
-    serializer = LecturerSerializer(user)
-    return Response(serializer.data)
+    return render(request, 'login.html')
 
-class LecturerRegisterAPIView(generics.CreateAPIView):
-  permission_classes = (AllowAny,)
-  serializer_class = LecturerRegisterSerializer
+def Phome(request):
+    if request.user.is_authenticated and user_type.objects.get(user=request.user).is_student:
+        return render(request,'student_home.html')
+    elif request.user.is_authenticated and user_type.objects.get(user=request.user).is_teach:
+        return redirect('thome')
+    else:
+        return redirect('login')
+                      
+def thome(request):
+    if request.user.is_authenticated and user_type.objects.get(user=request.user).is_teach:
+        return render(request,'teacher_home.html')
+    elif request.user.is_authenticated and user_type.objects.get(user=request.user).is_student:
+        return redirect('shome')
+    else:
+        return redirect('home')
+
+
+
+
+
+
 
 class SassAPIView(generics.CreateAPIView):
   permission_classes=(AllowAny,)
