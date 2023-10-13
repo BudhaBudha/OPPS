@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="proposal.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;1,200&display=swap" rel="stylesheet">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="header">
+        <div class="left">
+            <div class="logo">
+                <a href="./homepage.html" title="homepage">
+                    <img src="images/Mmust logo.png" alt=""  >
+                </a>
+                
+            </div>
+            <div class="toggle"><i class="fa fa-bars" aria-hidden="true" id="toggle"></i></div>
+        </div>
+        <div class="title">
+            <h1>MASINDE MULIRO UNIVERSITY OF SCIENCE & TECHNOLOGY</h1>
+        </div>
+        <div class="right">
+            <div class="notification"><iconify-icon icon="akar-icons:bell" style="font-size: 23px;" id="notificationBell"></iconify-icon></div>
+            <div class="line"><iconify-icon icon="pepicons-pencil:line-y" style="font-size: 40px;stroke:7%;"></iconify-icon></div>
+            <div class="profile">
+            <h2><i class="fa fa-user" aria-hidden="true" id="user"></i>   Hi,<span id="profileName">Kingsly</span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="info">
+        <div class="sidepanel">
+            <div class="up">
+              
+                <a href="homepage.html">
+                    <div class="dashboard" ><iconify-icon icon="material-symbols:dashboard-outline"  id="dashboardIcon" style="font-size: 23px;"></iconify-icon> Dashboard</div>
+                  </a>
+                    <a href="proposals.html">
+                        <div class="proposalStatus" style="color: black;" ><iconify-icon icon="arcticons:status" id="proposalStatusIcon" style="font-size: 23px;"></iconify-icon> Proposal Status</div>
+                    </a>   
+                      
+                      <a href="Profiles.html">
+                        <div class="profileIcon" ><iconify-icon icon="clarity:user-line"style="font-size: 23px"></iconify-icon>Profile</div>
+                      </a>  
+                      <a href="#">
+                        <div class="settings"> <iconify-icon icon="icon-park-outline:setting" style="font-size: 23px;"></iconify-icon> Settings</div>
+                      </a>
+                       
+              </div>
+            
+        </div>  
+        <div class="mainscreen">
+            <section class="options">
+                <h2>Dashboard </h2>
+                <h1>Welcome, Kingsly</h1>
+                <div class="status">
+                    <div class="counts">
+                        <div class="received">
+                            <p style="color: #1763D6;">ACCEPTED</p>
+                            <p class="receivedNum" id="accepted">21</p>
+                        </div>
+                        <div class="pending">
+                            <p style="color: #1763D6;" >PENDING</p>
+                            <p class="pendingNum" id="pending">10</p>
+                        </div>
+                        <div class="reviewed">
+                            <p style="color: #1763D6;">REJECTED</p>
+                            <p class="reviewedNum" id="rejected">11</p>
+                        </div>
+                    </div>
+
+                    <div class="recent">
+                        <h1>PROPOSALS</h1>
+                        <div class="list">
+                            <div class="details">
+                                <div class="proposalTitle" > Proposal</div>
+                                <div class="time">Time</div>
+                            </div>
+                            <div class="details">
+                                <div class="proposalTitle"> Proposal</div>
+                                <div class="time">Time</div>
+                            </div>
+                            <div class="details">
+                                <div class="proposalTitle"> Proposal</div>
+                                <div class="time">Time</div>
+                            </div>
+                            <div class="details">
+                                <div class="proposalTitle"> Proposal</div>
+                                <div class="time">Time</div>
+                            </div>
+
+                        </div>
+                    </div>
+                   
+                    
+              
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
