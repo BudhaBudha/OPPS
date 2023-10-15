@@ -19,6 +19,8 @@ class SassProposal(models.Model):
     Critical_risks=models.TextField(max_length=500)
     Monitoring_Evaluation=models.TextField(max_length=700)
     Project_Team=models.TextField(max_length=500)
+    def __str__(self):
+        return self.proposal_name 
 
 class SonasProposal(models.Model):
     #proposer=models.ForeignKey(Student,on_delete=models.CASCADE)
@@ -32,9 +34,13 @@ class SonasProposal(models.Model):
     Additional_funding=models.TextField(max_length=299)
     Project_Timeline=models.TextField(max_length=499)
     Budget=models.TextField(max_length=499)
-    NHIF_Biosketch=models.FileField()
+    NHIF_Biosketch=models.FileField(upload_to='files/')
+    
+    def __str__(self):
+        return self.proposal_name 
 
 #class Proposal(models.Model):
+
 
 
 
